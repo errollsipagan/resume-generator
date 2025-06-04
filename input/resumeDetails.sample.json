@@ -3,6 +3,7 @@
     "email": "johndoe@email.com",
     "phone": "+1234567890",
     "address": "123 Main St, Anytown, USA",
+    "summary": "Experienced software engineer with a strong background in web development and a passion for building scalable applications. Proficient in JavaScript, React, and Node.js, with a proven track record of delivering high-quality software solutions.",
     "education": [
         {
             "degree": "Bachelor of Science in Computer Science",

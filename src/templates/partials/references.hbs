@@ -1,0 +1,14 @@
+{{#if references}}
+    <div class="section">
+        <h2>References</h2>
+        <ul class="item-list">
+            {{#each references}}
+            <li>
+                <strong>{{name}}</strong> ({{relationship}})<br>
+                Email: {{email}}<br>
+                Contact: {{contact}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
