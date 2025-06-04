@@ -1,57 +1,82 @@
 # Resume Generator
 
-This is a Node.js application that generates a resume based on a template using user-provided details and skills. 
+A Node.js application that generates a resume PDF from your details using modular Handlebars templates and partials.
 
 ## Features
 
-- Generate a personalized resume using a Handlebars template.
-- Accept user details and skills as input parameters.
-- Serve the generated resume as a downloadable document.
+- Generates a professional resume PDF from a single JSON file.
+- Modular Handlebars templates: each resume section is a partial for easy customization.
+- Supports sections like education, experience (with projects and achievements), skills, certifications, languages, projects, and references.
+- No command-line parameters needed—just edit your JSON file.
 
 ## Project Structure
 
 ```
 resume-generator
-├── src
-│   ├── generateResume.js       # Entry point of the application
-│   ├── templates
-│   │   └── resumeTemplate.hbs  # Handlebars template for the resume
-│   └── utils
-│       └── generator.js        # Utility for generating the resume
 ├── input
-│   └── resumeDetails.json      # JSON for generating the resume
-├── package.json                # NPM configuration file
-└── README.md                   # Project documentation
+│   ├── resumeDetails.json           # Your resume data (edit this file)
+│   └── resumeDetails.sample.json    # Sample data structure
+├── output
+│   └── resume.pdf                   # Generated PDF resume
+├── src
+│   ├── generateResume.js            # Main script to generate the resume
+│   ├── templates
+│   │   ├── resumeTemplate.hbs       # Main Handlebars template
+│   │   └── partials                 # Folder for section partials
+│   │       ├── education.hbs
+│   │       ├── experience.hbs
+│   │       ├── skills.hbs
+│   │       ├── certifications.hbs
+│   │       ├── languages.hbs
+│   │       ├── projects.hbs
+│   │       └── references.hbs
+│   └── utils
+│       └── generator.js             # Registers partials and renders template
+├── package.json
+└── README.md
 ```
 
 ## Installation
 
 1. Clone the repository:
-   ```
+   ```sh
    git clone <repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```
    cd resume-generator
    ```
 
-3. Install the dependencies:
-   ```
+2. Install dependencies:
+   ```sh
    npm install
    ```
 
 ## Usage
 
-1. Make a copy of input/resumeDetails.sample.json and name it resumeDetails.json and change it according your details
-
-2. Generate the resume
+1. Copy the sample data and edit it:
+   ```sh
+   cp input/resumeDetails.sample.json input/resumeDetails.json
    ```
+   Edit `input/resumeDetails.json` with your information.
+
+2. Generate your resume PDF:
+   ```sh
    npm start
    ```
+   or
+   ```sh
+   node src/generateResume.js
+   ```
 
-3. Check output folder for the generated resume
+3. Find your generated PDF in the `output/` folder.
+
+## Customization
+
+- To change the look or structure, edit the main template (`src/templates/resumeTemplate.hbs`) or any partial in `src/templates/partials/`.
+- Each section (education, experience, etc.) is a separate partial for easy editing.
 
 ## License
 
 This project is licensed under the MIT License.
+
+## Credits
+
+This project was developed with the help of GitHub Copilot.
