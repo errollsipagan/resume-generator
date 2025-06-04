@@ -1,0 +1,109 @@
+{
+    "name": "John Doe",
+    "email": "johndoe@email.com",
+    "phone": "+1234567890",
+    "address": "123 Main St, Anytown, USA",
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science",
+            "institution": "Anytown University",
+            "year": 2020
+        },
+        {
+            "degree": "Master of Science in Software Engineering",
+            "institution": "Tech University",
+            "year": 2022
+        }
+    ],
+    "experience": [
+        {
+            "jobTitle": "Software Engineer",
+            "company": "Tech Solutions Inc.",
+            "startDate": "2020-06-01",
+            "endDate": "2022-05-31",
+            "responsibilities": [
+                "Developed web applications using React and Node.js",
+                "Collaborated with cross-functional teams to define project requirements"
+            ]
+        },
+        {
+            "jobTitle": "Senior Software Engineer",
+            "company": "Innovatech Ltd.",
+            "startDate": "2022-06-01",
+            "endDate": null,
+            "responsibilities": [
+                "Led a team of developers in building scalable software solutions",
+                "Implemented best practices for code quality and performance"
+            ],
+            "projects": [
+                {
+                    "name": "Project Alpha",
+                    "description": "Led the development of a new feature that increased user engagement by 20%"
+                }
+            ],
+            "achievements": [
+                "Improved application performance by 30%",
+                "Reduced bug count by implementing automated testing"
+            ]
+        }
+    ],
+    "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Python",
+        "SQL",
+        "Agile Methodologies"
+    ],
+    "certifications": [
+        {
+            "name": "Certified JavaScript Developer",
+            "issuingOrganization": "JavaScript Institute",
+            "year": 2021
+        },
+        {
+            "name": "AWS Certified Solutions Architect",
+            "issuingOrganization": "Amazon Web Services",
+            "year": 2023
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "proficiency": "Fluent"
+        },
+        {
+            "language": "Spanish",
+            "proficiency": "Conversational"
+        }
+    ],
+    "projects": [
+        {
+            "name": "E-commerce Platform",
+            "description": "Developed a full-stack e-commerce application with payment integration.",
+            "technologies": ["React", "Node.js", "MongoDB"],
+            "year": 2021,
+            "link": ""
+        },
+        {
+            "name": "Real-time Chat Application",
+            "description": "Built a real-time chat application using WebSocket technology.",
+            "technologies": ["Node.js", "Socket.io", "Express"],
+            "year": 2022
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Smith",
+            "relationship": "Former Manager",
+            "contact": "1234567890",
+            "email": "janesmith@email.com"
+        },
+        {
+            "name": "Michael Johnson",
+            "relationship": "Colleague",
+            "contact": "0987654321",
+            "email": "michaeljohnson@email.com"
+        }
+    ]
+}

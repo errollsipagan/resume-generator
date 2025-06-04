@@ -13,13 +13,13 @@ This is a Node.js application that generates a resume based on a template using 
 ```
 resume-generator
 ├── src
-│   ├── index.js               # Entry point of the application
+│   ├── generateResume.js       # Entry point of the application
 │   ├── templates
 │   │   └── resumeTemplate.hbs  # Handlebars template for the resume
-│   ├── utils
-│   │   └── generator.js        # Utility for generating the resume
-│   └── data
-│       └── userDetails.json    # Default user details
+│   └── utils
+│       └── generator.js        # Utility for generating the resume
+├── input
+│   └── resumeDetails.json      # JSON for generating the resume
 ├── package.json                # NPM configuration file
 └── README.md                   # Project documentation
 ```
@@ -43,10 +43,14 @@ resume-generator
 
 ## Usage
 
-1. Start the application:
+1. Make a copy of input/resumeDetails.sample.json and name it resumeDetails.json and change it according your details
+
+2. Generate the resume
    ```
    npm start
    ```
+
+3. Check output folder for the generated resume
 
 ## License
 

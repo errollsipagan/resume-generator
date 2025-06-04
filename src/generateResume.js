@@ -2,30 +2,17 @@ const { generateResume } = require('./utils/generator');
 const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
-const args = require('minimist')(process.argv.slice(2));
 
-const name = args.name || 'Your Name';
-const email = args.email || 'your.email@example.com';
-const phone = args.phone || '123-456-7890';
-const skills = args.skills ? args.skills.split(',').map(s => s.trim()) : [];
-
-if (!skills.length) {
-    console.error('Please provide skills using --skills="Skill1, Skill2, ..."');
+// Load resume details from JSON file
+const detailsPath = path.join(__dirname, '../input/resumeDetails.json');
+if (!fs.existsSync(detailsPath)) {
+    console.error('resumeDetails.json not found in input directory.');
     process.exit(1);
 }
+const resumeDetails = JSON.parse(fs.readFileSync(detailsPath, 'utf-8'));
 
-// You can add more fields as needed
-const resumeHtml = generateResume({
-    name,
-    email,
-    phone,
-    skills,
-    objective: args.objective || '',
-    education: args.education || '',
-    experience: args.experience || '',
-    projects: args.projects || '',
-    references: args.references || ''
-});
+// Generate HTML from template
+const resumeHtml = generateResume(resumeDetails);
 
 const outputDir = path.join(__dirname, '../output');
 const outputPath = path.join(outputDir, 'resume.pdf');
