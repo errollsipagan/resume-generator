@@ -13,7 +13,9 @@
         {
             "degree": "Master of Science in Software Engineering",
             "institution": "Tech University",
-            "year": 2022
+            "year": 2022,
+            "honors": "Graduated with Distinction",
+            "gpa": 3.8
         }
     ],
     "experience": [

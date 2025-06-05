@@ -1,10 +1,13 @@
 {{#if education}}
     <div class="section">
-        <h2>Education</h2>
+        <h3>Education</h3>
         <ul class="item-list">
             {{#each education}}
             <li>
-                <strong>{{degree}}</strong>, {{institution}} ({{year}})
+                <strong>{{degree}}</strong>{{#if major}}, Major in {{major}}{{/if}} ({{year}})<br>
+                {{#if honors}}<em>Honors:</em> {{honors}}<br>{{/if}}
+                {{#if gpa}}<em>GPA:</em> {{gpa}}<br>{{/if}}
+                {{institution}}<br>
             </li>
             {{/each}}
         </ul>
