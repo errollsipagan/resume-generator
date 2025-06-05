@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/generateResume.js",
+    "resume": "node src/generateResume.js resumeDetails.json resume.pdf",
     "watch": "nodemon --watch src/templates/resumeTemplate.hbs --exec \"npm start\""
   },
   "dependencies": {

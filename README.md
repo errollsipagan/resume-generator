@@ -40,7 +40,7 @@ resume-generator
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/errollsipagan/resume-generator.git
    cd resume-generator
    ```
 
@@ -58,12 +58,14 @@ resume-generator
    Edit `input/resumeDetails.json` with your information.
 
 2. Generate your resume PDF:
+   
+   Default (no params)
    ```sh
    npm start
    ```
-   or
+   or With custom files
    ```sh
-   node src/generateResume.js
+   node src/generateResume.js myCustomDetails.json myCustomResume.pdf
    ```
 
 3. Find your generated PDF in the `output/` folder.

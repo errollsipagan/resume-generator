@@ -3,10 +3,15 @@ const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
 
+// Get parameters from command line or use defaults
+const args = process.argv.slice(2);
+const inputFile = args[0] || 'resumeDetails.json';
+const outputFile = args[1] || 'resume.pdf';
+
 // Load resume details from JSON file
-const detailsPath = path.join(__dirname, '../input/resumeDetails.json');
+const detailsPath = path.join(__dirname, '../input', inputFile);
 if (!fs.existsSync(detailsPath)) {
-    console.error('resumeDetails.json not found in input directory.');
+    console.error(`${inputFile} not found in input directory.`);
     process.exit(1);
 }
 const resumeDetails = JSON.parse(fs.readFileSync(detailsPath, 'utf-8'));
@@ -15,7 +20,7 @@ const resumeDetails = JSON.parse(fs.readFileSync(detailsPath, 'utf-8'));
 const resumeHtml = generateResume(resumeDetails);
 
 const outputDir = path.join(__dirname, '../output');
-const outputPath = path.join(outputDir, 'resume.pdf');
+const outputPath = path.join(outputDir, outputFile);
 
 fs.mkdirSync(outputDir, { recursive: true });
 
